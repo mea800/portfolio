@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* انا فوق عملت استيراد لمجوعة خطوط بوبنز بتاع جوجل */
+*{                     /*هنا عملت علامة استار علشان يطبق على كل الصفحة الخصائص القادمة */
+    font-family: 'Poppins', sans-serif; /*وهنا عملت لصق لمجموعة الخطوط */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header{         /*هنا باعطي خصائص للهيدر وبعد كدا هاعطي خصائص للحاجات اللى جوه الهيدر */
+    background-color: #f0f0f0;
+    width: 100%;
+    position: fixed;
+    z-index: 999;   /*باعمله اعلى رقم علشان مفيش حاجه تانيه تغطي عليه */
+    display: flex;    /*الافضل دايما انى اشتغل بالفليكس علشان بيظبط الديفات جواه */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+}
+
+.logo{
+    text-decoration: none;
+    color: #3a6cf4;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em; /*الافضل اني استخدم الوحدة دى علشان نسبية بالنسبة لحجم الديف اللى فوقه*/
+}
+
+.navigation a{
+    color: #3a6cf4;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+.navigation a:hover{
+    color: #601cfc;
+}
+
+section {
+    padding: 100px 150px;
+}
+
+.main {
+    width: 100%;  /*عملتها ميه في المية علشان تاخد عرض الصفحة كلها */
+    min-height: 100vh;  /* الافضل اعملها كدا مش اكتب الارتفاع فقط علشان كدا تكون متغيرى */
+    display: flex;
+    align-items: center;
+    background: url(images/myphoto-with-background.jpg) no-repeat;
+    background-size: cover;  /*كوفر علشان تغطي الصفحة كلها */
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main h2 {
+    color: black;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.main h2 span {
+    display: inline-block;   /* هنا انا باعطيه ان لاين بلوك علشان اقدر اعطيه مارجين توب علشان الاسبان في الاصل بلوك*/
+    margin-top: 10px;
+    color: #3a6cf4;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.main h3 {
+    color: black;
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: 1px;  /*باعمل دي علشان بتعطي شكل جمالي افضل */
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.main-btn {
+    color: #f0f0f0;
+    background-color: #3a6cf4;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;  /*دي اعطيتها ان لاين بلوك علشان الانكر لينك في الاصل بتكون بلوك */
+    padding: .9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px; /*علشان تاخد شكل دائري من الجوانب */
+    margin-bottom: 40px;
+    transition: 0.7s ease;  /*دي ضيفتها علشان الهوفر ومدته وطريقة التحول */
+}
+
+.main-btn:hover {
+    background-color: #601cfc;
+    transform: scale(1.1); /*دا كدا افضل سكيل علشان يكون انسيابي */
+}
+
+.social-icons a {
+    color: black;
+    font-size: 1.7em;
+    padding-right: 30px;  /*اعطيتها بادينج علشان يكوف في تباعد بين الايقونات*/
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: #3a6cf4;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #f0f0f0;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.icon {
+    color: #3a6cf4;
+    font-size: 8em;
+    text-align: center;
+}
+
+.info {
+    text-align: center;
+}
+
+.info h3 {
+    color: #3a6cf4;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.projects {
+    background-color: #000160;
+}
+
+.projects .content {
+    margin: 30px;
+}
+
+.project-card {
+    background-color: #f0f0f0;
+    border: 1px solid #f0f0f0;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.1);
+}
+
+.project-card:hover .project-image {
+    opacity: 0.9;
+}
+
+.project-image img {
+    width: 100%;
+}
+
+#w1 {                 /*لاحظ هنا استخدمت الاى دي علشان اظبط حجم الصورة داخل الديف دا */
+    height: 250px;
+}
+
+.project-info {
+    padding: 1em;
+}
+
+.project-category {
+    font-size: 0.8em;
+    color: #000;
+}
+
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin: 10px;
+}
+
+.more-details {
+    text-decoration: none;
+    color: #3a6cf4;
+}
+
+.more-details:hover {
+    color: #601cfc;
+}
+
+.cards-contact .icon {
+    font-size: 4.5em;
+}
+
+.cards-contact .info h3 {
+    color: #000;
+}
+
+.cards-contact .info a {
+    font-size: 1.5em;
+    color: #000;
+    text-decoration: none;
+}
+
+.footer {
+    background-color: #000160;
+    color: #f0f0f0;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .social-icons a {
+    color: #f0f0f0;
+    font-size: 1.3em;
+    padding: 0 12px 0 0;
+}
+
+.footer-title {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.footer-title span {
+    color: #3a6cf4;
+}
+
+@media (max-width:1023px) {
+    header{
+        padding: 12px 20px;
+    }
+
+    .navigation a {
+        padding-left: 10px;
+    }
+
+    .title {
+        font-size: 1.8em;
+    }
+
+    section {
+        padding: 80px 20px;
+    }
+
+    .main h2 {
+        font-size: 1em;
+    }
+
+    .main h3 {
+        font-size: 1.6em;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
+@media (max-width:641px) {
+    body {
+        font-size: 12px;
+    }
+
+    .main h2 {
+        font-size: 0.8em;
+    }
+
+    .main h3 {
+        font-size: 1.4em;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width:300px) {
+    body {
+        font-size: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        margin: 20px -20px;
+    }
+    
+}
